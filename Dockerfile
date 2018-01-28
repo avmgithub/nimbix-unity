@@ -14,8 +14,8 @@ RUN apt-get -y update && \
         https://raw.githubusercontent.com/nimbix/image-common/$GIT_BRANCH/install-nimbix.sh \
         | bash -s -- --setup-nimbix-desktop --image-common-branch $GIT_BRANCH
 
-ADD help.html /etc/NAE/help.html
-ADD AppDef.json /etc/NAE/AppDef.json
+ADD NAE/help.html /etc/NAE/help.html
+ADD NAE/AppDef.json /etc/NAE/AppDef.json
 
 # Expose port 22 for local JARVICE emulation in docker
 EXPOSE 22
