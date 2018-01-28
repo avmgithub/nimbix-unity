@@ -14,6 +14,7 @@ RUN apt-get -y update && \
         https://raw.githubusercontent.com/nimbix/image-common/$GIT_BRANCH/install-nimbix.sh \
         | bash -s -- --setup-nimbix-desktop --image-common-branch $GIT_BRANCH
 
+RUN curl http://beta.unity3d.com/download/fd37f3680b5f/unity-editor-installer-2017.2.0b11.sh --output unity.sh
 ADD NAE/help.html /etc/NAE/help.html
 ADD NAE/AppDef.json /etc/NAE/AppDef.json
 
