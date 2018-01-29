@@ -17,7 +17,7 @@ RUN apt-get -y update && \
 RUN apt-get install -y libnspr4 libnss3 libpango1.0-0  xdg-utils libpq5 npm
 #RUN curl http://beta.unity3d.com/download/fd37f3680b5f/unity-editor-installer-2017.2.0b11.sh --output unity.sh
 RUN curl http://beta.unity3d.com/download/fd37f3680b5f/unity-editor_amd64-2017.2.0b11.deb --output unity-editor_amd64-2017.2.0b11.deb 
-#RUN sudo dpkg  -i /home/nimbix/unity-editor_amd64-2017.2.0b11.deb 
+RUN sudo dpkg  -i unity-editor_amd64-2017.2.0b11.deb 
 ADD NAE/help.html /etc/NAE/help.html
 ADD NAE/AppDef.json /etc/NAE/AppDef.json
 
