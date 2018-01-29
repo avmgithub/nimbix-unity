@@ -17,7 +17,7 @@ RUN apt-get -y update && \
 RUN apt-get install -y libnspr4 libnss3 libpango1.0-0  xdg-utils libpq5 npm
 RUN curl http://beta.unity3d.com/download/7807bc63c3ab/UnitySetup-2017.3.0p2 --output UnitySetup-2017.3.0p2
 RUN sudo chmod +x ./UnitySetup-2017.3.0p2
-RUN echo y | sudo ./UnitySetup-2017.3.0p2 --unattended --install-location=/opt/Unity --components Unity,Documentation,StandardAssets,WebGL
+#RUN echo y | sudo ./UnitySetup-2017.3.0p2 --unattended --install-location=/opt/Unity --components Unity,Documentation,StandardAssets,WebGL
 
 ADD NAE/help.html /etc/NAE/help.html
 ADD NAE/AppDef.json /etc/NAE/AppDef.json
