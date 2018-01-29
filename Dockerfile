@@ -14,6 +14,7 @@ RUN apt-get -y update && \
         https://raw.githubusercontent.com/nimbix/image-common/$GIT_BRANCH/install-nimbix.sh \
         | bash -s -- --setup-nimbix-desktop --image-common-branch $GIT_BRANCH
 
+RUN apt-get -y install lib32gcc1 lib32stdc++6 libc6-i386 libnspr4 libnss3 libpango1.0-0 libpg5 xdg-utils npm
 RUN curl http://beta.unity3d.com/download/fd37f3680b5f/unity-editor-installer-2017.2.0b11.sh --output unity.sh
 RUN curl http://beta.unity3d.com/download/fd37f3680b5f/unity-editor_amd64-2017.2.0b11.deb --output unity-editor_amd64-2017.2.0b11.deb 
 #RUN sudo dpkg  -i /home/nimbix/unity-editor_amd64-2017.2.0b11.deb 
