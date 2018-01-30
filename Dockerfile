@@ -21,7 +21,7 @@ RUN curl http://beta.unity3d.com/download/ad31c9083c46/unity-editor_amd64-2017.2
 #RUN sudo chmod +x ./UnitySetup-2017.3.0p2
 #RUN echo y | sudo ./UnitySetup-2017.3.0p2 --unattended --install-location=/opt/Unity --components Unity,Documentation,StandardAssets,WebGL
 
-RUN git clone https://github.com/udacity/self-driving-car.git
+RUN git clone https://github.com/udacity/self-driving-car-sim.git
 
 ADD NAE/help.html /etc/NAE/help.html
 ADD NAE/AppDef.json /etc/NAE/AppDef.json
