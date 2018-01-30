@@ -1,5 +1,5 @@
-FROM nvidia/opengl:1.0-glvnd-devel-ubuntu16.04
-#FROM ubuntu:xenial
+#FROM nvidia/opengl:1.0-glvnd-devel-ubuntu16.04
+FROM ubuntu:xenial
 MAINTAINER Nimbix, Inc.
 
 # Update SERIAL_NUMBER to force rebuild of all layers (don't use cached layers)
@@ -27,6 +27,8 @@ RUN git clone https://github.com/udacity/self-driving-car-sim.git
 
 ADD NAE/help.html /etc/NAE/help.html
 ADD NAE/AppDef.json /etc/NAE/AppDef.json
+
+RUN sudo chmod  u+s /usr/lib/libdlfaker.so /usr/lib/libvglfaker.so
 
 # Expose port 22 for local JARVICE emulation in docker
 EXPOSE 22
