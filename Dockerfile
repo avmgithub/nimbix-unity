@@ -1,4 +1,5 @@
-FROM ubuntu:xenial
+FROM nvidia/opengl:1.0-glvnd-devel-ubuntu16.04
+#FROM ubuntu:xenial
 MAINTAINER Nimbix, Inc.
 
 # Update SERIAL_NUMBER to force rebuild of all layers (don't use cached layers)
@@ -21,6 +22,7 @@ RUN curl http://beta.unity3d.com/download/ad31c9083c46/unity-editor_amd64-2017.2
 #RUN sudo chmod +x ./UnitySetup-2017.3.0p2
 #RUN echo y | sudo ./UnitySetup-2017.3.0p2 --unattended --install-location=/opt/Unity --components Unity,Documentation,StandardAssets,WebGL
 
+RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash && sudo apt-get install git-lfs && sudo git lfs install
 RUN git clone https://github.com/udacity/self-driving-car-sim.git
 
 ADD NAE/help.html /etc/NAE/help.html
