@@ -16,12 +16,12 @@ RUN apt-get -y update && \
 
 RUN apt-get install -y libnspr4 libnss3 libpango1.0-0  xdg-utils libpq5 npm
 #RUN curl http://beta.unity3d.com/download/7807bc63c3ab/UnitySetup-2017.3.0p2 --output UnitySetup-2017.3.0p2
-#RUN curl http://beta.unity3d.com/download/ad31c9083c46/unity-editor_amd64-2017.2.0f1.deb --output unity-editor_amd64-2017.2.0f1.deb
-RUN curl http://beta.unity3d.com/download/ddd95e743b51/unity-editor_amd64-5.6.2xf1Linux.deb --output unity-editor_amd64-5.6.2xf1Linux.deb 
+RUN curl http://beta.unity3d.com/download/ad31c9083c46/unity-editor_amd64-2017.2.0f1.deb --output unity-editor_amd64-2017.2.0f1.deb
+#RUN curl http://beta.unity3d.com/download/ddd95e743b51/unity-editor_amd64-5.6.2xf1Linux.deb --output unity-editor_amd64-5.6.2xf1Linux.deb 
 #RUN sudo chmod +x ./UnitySetup-2017.3.0p2
 #RUN echo y | sudo ./UnitySetup-2017.3.0p2 --unattended --install-location=/opt/Unity --components Unity,Documentation,StandardAssets,WebGL
 
-RUN cd /home/nimbix; git clone https://github.com/udacity/self-driving-car.git
+RUN git clone https://github.com/udacity/self-driving-car.git
 
 ADD NAE/help.html /etc/NAE/help.html
 ADD NAE/AppDef.json /etc/NAE/AppDef.json
