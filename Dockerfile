@@ -25,6 +25,7 @@ RUN curl http://beta.unity3d.com/download/ad31c9083c46/unity-editor_amd64-2017.2
 RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash && sudo apt-get install git-lfs && sudo git lfs install
 RUN git clone https://github.com/udacity/self-driving-car-sim.git
 
+ADD NAE/nvidia.cfg /etc/NAE/nvidia.cfg
 ADD NAE/help.html /etc/NAE/help.html
 ADD NAE/AppDef.json /etc/NAE/AppDef.json
 
