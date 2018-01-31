@@ -1,6 +1,5 @@
-FROM nimbix/ubuntu-cuda:latest
 #FROM nvidia/opengl:1.0-glvnd-devel-ubuntu16.04
-#FROM ubuntu:xenial
+FROM ubuntu:xenial
 MAINTAINER Nimbix, Inc.
 
 # Update SERIAL_NUMBER to force rebuild of all layers (don't use cached layers)
